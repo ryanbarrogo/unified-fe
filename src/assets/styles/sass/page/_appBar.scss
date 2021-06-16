@@ -1,0 +1,23 @@
+.v-app-bar {
+  height: 79px!important;
+
+  .v-app-bar__content {
+    padding: 0 !important;
+    height: inherit;
+  }
+
+  .flex-grow-1 {
+    background: linear-gradient(237.18deg, #1CAAC9 0%, #2276AA 100%);
+    border-radius: 0px 0px 110px 0px;
+    color: #ffffff;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    height: 100%;
+  }
+
+  .fas {
+    @include appBarIcons;
+    margin-top: 30px;
+  }
+}

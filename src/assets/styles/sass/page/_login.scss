@@ -1,0 +1,66 @@
+#login {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -118.5px;
+  }
+
+  .logo-xs {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .v-container {
+    height: 100%;
+    padding: 0;
+
+    .v-row {
+      height: 100%;
+    }
+
+    .left-panel {
+      overflow: hidden;
+      position: relative;
+      z-index: 2;
+    }
+
+    .right-panel {
+      background-image: url('./assets/img/auth/right-panel.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+}
+
+.footer-label {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+
+  p {
+    padding: 0 20px;
+    color: #57a29a;
+    font-size: 13px;
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      right: 0;
+    }
+
+  }
+
+}

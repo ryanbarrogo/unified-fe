@@ -1,0 +1,107 @@
+@mixin gradientTeal {
+  background-image: -webkit-linear-gradient(92deg, #46f8e3, #27746b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin gradientOrange {
+  background-image: -webkit-linear-gradient(92deg, #f99246, #ffcf73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin disabledButton {
+  background: transparent !important;
+  font-weight: 700;
+  color: $NAV_BACKGROUND !important;
+  border: solid 2px $NAV_BACKGROUND;
+  box-shadow: none !important;
+  &:hover {
+    cursor: default;
+  }
+}
+
+@mixin inputField {
+  border: 1px solid #cecece !important;
+  padding: 0.75rem 1.25rem !important;
+}
+
+@mixin appBarIcons {
+  background: linear-gradient(231.17deg, #F7931D 0%, #F76B1D 100%);
+  color: #FFFFFF;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mainButton {
+  font-weight: 700 !important;
+  color: $BASE_COLOR !important;
+  background: linear-gradient(237.18deg, #1CAAC9 0%, #2276AA 100%) !important;
+  border-radius: 40px !important;
+  padding: 0.75rem 1.25rem !important;
+  &:hover {
+    background: linear-gradient(237.18deg, #1CAAC9 50%, #2276AA 100%) !important;
+    box-shadow: 0 0 10px 2px $BASE_COLOR !important;
+  }
+}
+
+@mixin successButton {
+  background: transparent !important;
+  font-weight: 700;
+  color: $SUCCESS !important;
+  border: solid 2px $SUCCESS;
+  &:hover {
+    background: $SUCCESS !important;
+    box-shadow: 0 0 10px 2px $SUCCESS !important;
+    color: $TITLE !important;
+  }
+}
+
+@mixin warningButton {
+  background: transparent !important;
+  font-weight: 700;
+  color: $WARNING !important;
+  border: solid 2px $WARNING;
+  &:hover {
+    background: $WARNING !important;
+    box-shadow: 0 0 10px 2px $WARNING !important;
+    color: darken($WARNING, 40%) !important;
+  }
+}
+
+@mixin errorButton {
+  background: transparent !important;
+  font-weight: 700;
+  color: $ERROR !important;
+  border: solid 2px $ERROR;
+
+  &:hover {
+    background: $ERROR !important;
+    box-shadow: 0 0 10px 2px $ERROR !important;
+    color: darken($ERROR, 40%) !important;
+  }
+}
+
+@mixin data {
+  margin: 0 10px;
+  text-align: center;
+  border: solid 2px $WARNING;
+  padding: 6px;
+  min-width: 100px;
+  line-height: 16px;
+  border-radius: 3px;
+
+  h2 {
+    color: $WARNING;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  span {
+    color: $LIGHT_FONT;
+    font-size: 12px;
+  }
+}

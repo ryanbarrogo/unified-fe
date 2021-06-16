@@ -1,0 +1,576 @@
+h1 {
+  font-family: $MAIN_FONT;
+  //text-transform: uppercase;
+  span {
+    display: block;
+  }
+}
+
+#app {
+  background: $BASE_BACKGROUND;
+  font-family: $MAIN_FONT;
+  margin: 0;
+}
+
+.v-toolbar__side-icon {
+  color: $TITLE !important;
+}
+
+#navigation + section {
+  padding-bottom: 37px;
+}
+
+section {
+  .container {
+    max-width: none;
+  }
+}
+
+.table-buttons {
+  display: flex !important;
+  padding: 5px 0 !important;
+}
+
+.date-range-picker {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 3px;
+}
+
+.title-bar {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 40px;
+  background: transparent !important;
+
+  .v-form {
+    display: inherit;
+  }
+
+  .toolbar--field {
+    padding-left: 20px;
+    padding-right: 6px;
+    min-width: 250px !important;
+
+    .toolbar-label {
+      position: relative;
+      top: -5px;
+      color: #bbb;
+      font-size: 12px;
+    }
+
+    .toolbar-value {
+      position: relative;
+      color: #fff;
+      font-size: 16px;
+      font-weight: normal;
+      top: -6px;
+      border-bottom: 1px #aaa solid;
+      padding: 0px 0px 3px 0px;
+      min-height: 28px;
+    }
+  }
+
+  .v-toolbar__content {
+    height: auto !important;
+  }
+
+  .v-toolbar__items {
+    max-height: 45px;
+
+    .v-input {
+      padding-top: 10px;
+    }
+
+    .v-input.v-text-field--outline {
+      padding-top: 0;
+    }
+  }
+
+  .v-text-field {
+    padding-top: 0;
+    margin: 0 5px !important;
+  }
+
+  .title-text {
+    color: $TITLE;
+    font-size: 25px;
+
+    .sub-title {
+      display: inline-flex;
+      padding-left: 0px;
+      font-size: 20px;
+      font-weight: normal;
+    }
+  }
+
+  .v-btn {
+    margin: 0 5px !important;
+  }
+}
+
+.highlight {
+  color: $HIGHLIGHT_TEXT;
+  //text-shadow: 0 0 25px $HIGHLIGHT_TEXT;
+  letter-spacing: 3px;
+  font-weight: 700;
+
+  span {
+    color: $TITLE;
+    font-weight: 300;
+    text-shadow: 0 0 25px $TITLE;
+  }
+}
+
+//.search{
+//	background: darken($BASE_BACKGROUND, 3%);
+//	padding: 5px;
+//	border-radius: 30px;
+//	margin-left: 40px;
+//
+//	.v-input__control{
+//		min-height: inherit !important;
+//	}
+//
+//	.v-input__slot{
+//		background: transparent !important;
+//		margin-bottom: 0;
+//	}
+//}
+
+//FORMS
+.error-message {
+  color: #ff5252;
+  margin: 0;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+  top: -5px;
+}
+
+.hasError {
+  .toolbar-label {
+    color: #ff5252 !important;
+  }
+
+  .toolbar-value {
+    border-color: #ff5252 !important;
+  }
+}
+
+
+.v-label.primary--text,
+.v-select__slot .primary--text,
+.v-input.primary--text,
+.v-icon.primary--text {
+  color: $BASE_COLOR !important;
+  caret-color: $BASE_COLOR !important;
+}
+
+.v-input--switch {
+  .accent--text {
+    color: $SUCCESS !important;
+    caret-color: $SUCCESS !important;
+  }
+}
+
+//TABLE
+.v-pagination {
+  li {
+    display: none !important;
+  }
+
+  li:first-child,
+  li:last-child {
+    display: block !important;
+  }
+}
+
+.v-datatable__actions__select {
+  .v-datatable__actions__select + .v-datatable__actions__select {
+    // display: none;
+  }
+}
+
+
+.v-datatable {
+  background-color: lighten($TABLE_BACKGROUND, 1%) !important;
+  position: relative;
+
+  .ENABLED,
+  .APPROVED {
+    color: $SUCCESS;
+  }
+
+  .DISABLED,
+  .SUSPENDED,
+  .REJECTED {
+    color: $ERROR;
+  }
+
+  .PENDING {
+    color: $WARNING;
+    font-weight: bold;
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background: lighten($TABLE_BACKGROUND, 1%) !important;
+    }
+
+    tr:nth-child(odd) {
+      background: lighten($TABLE_BACKGROUND, 3%) !important;
+    }
+
+    tr:hover {
+      background: darken($TABLE_BACKGROUND, 5%) !important;
+    }
+  }
+
+  .v-input--switch {
+    margin-top: 10px !important;
+
+    .v-input__slot {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .v-btn--icon {
+    width: 25px;
+    height: 25px;
+
+    i {
+      font-size: 15px;
+      margin-top: -1px;
+    }
+  }
+
+  .v-input--switch {
+    .v-input__slot {
+      margin-bottom: 0;
+    }
+  }
+
+  .v-datatable__actions {
+    background: rgba($TABLE_BACKGROUND, .5) !important;
+  }
+}
+
+//TABS
+.v-tabs__bar {
+  .v-tabs__item {
+    margin: 0 15px;
+  }
+
+  .v-tabs__item--active {
+    color: $BASE_COLOR;
+  }
+
+  .v-tabs__slider.accent {
+    background-color: $BASE_COLOR !important;
+    border-color: $BASE_COLOR !important;
+  }
+}
+
+//EXPANSION PANEL
+.v-expansion-panel__body {
+  .v-card {
+    background: lighten($TABLE_BACKGROUND, 5%) !important;
+  }
+}
+
+.v-expansion-panel__header {
+
+  > div > div {
+    width: fit-content;
+  }
+}
+
+.v-expansion-panel__container {
+  background: transparent !important;
+
+  .v-btn--icon {
+    width: 22px !important;
+    height: 22px !important;
+    padding: 0 !important;
+
+    i {
+      font-size: 12px;
+    }
+  }
+}
+
+.v-input--switch,
+.v-input__slot,
+.v-input__control {
+  margin: 0 !important;
+}
+
+//MODAL
+.v-dialog {
+
+  border: 1px solid #999;
+
+  .v-toolbar {
+    background: transparent !important;
+
+    .v-toolbar__content {
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .v-card {
+    background: rgba($BASE_BACKGROUND, .95) !important;
+
+    .v-card__title {
+      background: rgba($BASE_BACKGROUND, .6);
+    }
+  }
+
+  button.v-btn {
+    border: none !important;
+    box-shadow: 0 0 0 0 !important;
+  }
+
+  .warning-logout {
+    text-align: center;
+
+    .v-card__text {
+      color: $TITLE;
+      min-height: 300px;
+      font-size: 20px;
+      padding: 20%;
+    }
+
+    #time {
+      font-weight: 700;
+      font-size: 40px;
+      margin-top: 10px;
+    }
+  }
+
+  .thank-you-modal {
+    text-align: center;
+
+    .v-card__text {
+      color: $TITLE;
+      text-transform: uppercase;
+      font-size: 20px;
+      padding: 20%;
+    }
+  }
+
+  .layout > .flex {
+    padding: 0 5px;
+  }
+
+  .reason-of-request {
+    word-break: break-all;
+  }
+}
+
+
+.data {
+  @include data;
+}
+
+//BUTTONS
+.v-btn {
+  padding: 5px 10px !important;
+}
+
+.main-title {
+  @include gradientTeal;
+}
+
+input {
+  @include inputField;
+}
+
+.main-btn {
+  @include mainButton;
+
+  &.v-btn--disabled {
+    border: none;
+  }
+}
+
+.error-btn {
+  @include errorButton;
+}
+
+.success-btn {
+  @include successButton;
+}
+
+.warning-btn {
+  @include warningButton;
+}
+
+.disabled-btn {
+  @include disabledButton;
+}
+
+.daterangepicker {
+  .cancelBtn {
+    @include errorButton;
+  }
+
+  .applyBtn {
+    @include successButton;
+  }
+}
+
+.date-range {
+  position: relative;
+
+  .date-range-error-message {
+    position: absolute;
+    left: 20px;
+    margin-top: -8px;
+    color: #ff5252;
+    font-size: 12px;
+  }
+}
+
+
+//FOOTER
+.v-footer {
+  background: $SECOND_BACKGROUND !important;
+
+  .v-card {
+    background: lighten($BASE_BACKGROUND, 5%) !important;
+    border-radius: 0 !important;
+  }
+}
+
+
+//ANIMATION PARTICLES
+.circle-container {
+  opacity: .3 !important;
+  $particleNum: 200;
+  $particleColor: hsl(180, 100%, 80%);
+
+  position: absolute;
+  transform: translateY(-10vh);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    background-image: radial-gradient(
+                    hsl(180, 100%, 80%),
+                    hsl(180, 100%, 80%) 10%,
+                    hsla(180, 100%, 80%, 0) 56%
+    );
+
+    animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
+
+    @keyframes fade-frames {
+      0% {
+        opacity: 0.6;
+      }
+
+      50% {
+        opacity: 0.4;
+      }
+
+      100% {
+        opacity: 0.6;
+      }
+    }
+
+    @keyframes scale-frames {
+      0% {
+        transform: scale3d(0.4, 0.4, 1);
+      }
+
+      50% {
+        transform: scale3d(2.2, 2.2, 1);
+      }
+
+      100% {
+        transform: scale3d(0.4, 0.4, 1);
+      }
+    }
+  }
+
+  $particleBaseSize: 8;
+
+
+  @for $i from 1 through $particleNum {
+    &:nth-child(#{$i}) {
+      $circleSize: random($particleBaseSize);
+      width: $circleSize + px;
+      height: $circleSize + px;
+
+      $startPositionY: random(10) + 100;
+      $framesName: "move-frames-" + $i;
+      $moveDuration: 28000 + random(9000) + ms;
+
+      animation-name: #{$framesName};
+      animation-duration: $moveDuration;
+      animation-delay: random(37000) + ms;
+
+      @keyframes #{$framesName} {
+        from {
+          transform: translate3d(
+                          #{random(100) + vw},
+                          #{$startPositionY + vh},
+                          0
+          );
+        }
+
+        to {
+          transform: translate3d(
+                          #{random(100) + vw},
+                          #{- $startPositionY - random(30) + vh},
+                          0
+          );
+        }
+      }
+
+      .circle {
+        animation-delay: random(4000) + ms;
+      }
+    }
+  }
+}
+
+// GLOBAL CLASSES
+
+.ghost-fill {
+  background: transparent !important;
+}
+
+.v-sheet {
+  border-radius: 5px !important
+}
+
+#footer {
+  p {
+    color: #999;
+  }
+
+  span {
+    padding: 0px 5px;
+  }
+}
+
+#pagination {
+
+  p {
+    left: 20px;
+    position: absolute;
+    color: #999;
+
+    span {
+      color: #fff;
+    }
+
+  }
+
+}

@@ -4,7 +4,7 @@ let endpoint = {
     get_token: 'auth/token',
     profile_details: 'user/profile',
     auth: {
-        get_token: 'auth/token',
+        get_token: 'Token/CareManagerLogin',
         destroy_token: 'auth/token',
         validate_token: 'auth/token',
         refresh_token: 'auth/token',
@@ -23,7 +23,8 @@ export default {
         return await this.axios.get(endpoint.auth.validate_token, getToken())
     },
     async getToken(body) {
-        return await this.axios.put(endpoint.auth.get_token, body)
+        console.log(this.axios)
+        return await this.axios.post(endpoint.auth.get_token, body)
     },
     async destroyToken() {
         return await this.axios.delete(endpoint.auth.destroy_token, getToken())
