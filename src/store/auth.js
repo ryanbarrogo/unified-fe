@@ -32,11 +32,11 @@ const getters = {
 const actions = {
     async getToken({commit}, params = {}) {
         let response = await api.getToken(params)
-        if (response.status == 200) { // !response.data.errors && !response.data.error
+        if (response.status === 200) { // !response.data.errors && !response.data.error
             window.localStorage.setItem('userdata', JSON.stringify(response.data.data))
             Cookie.set('token', response.data.data.token)
             let res = await api.getPermissions()
-            if (res.status == 200) {
+            if (res.status === 200) {
                 localStorage.setItem('permissions', JSON.stringify(res.data.data))
             }
             window.location.reload()
@@ -46,27 +46,27 @@ const actions = {
     },
     async destroyToken() {
         let body = {
-            token: $cookies.get('token')
+            token: Cookie.get('token')
         }
         return await api.destroyToken(body)
     },
     async validateToken() {
         let body = {
-            token: $cookies.get('token')
+            token: Cookie.get('token')
         }
         return await api.validateToken(body)
     },
     async refreshToken() {
-        let token = $cookies.get('token')
+        let token = Cookie.get('token')
         let response = await api.refreshToken(token)
         if (response.data.data.token) {
             window.localStorage.setItem('userdata', JSON.stringify(response.data.data))
-            Cookie.set('token', response.data.data.token)
+            Cookie.set('token', response.data.data.Token)
         }
         return response
     },
     async getUserInformation({commit}) {
-        let headers = {token: $cookies.get('token')}
+        let headers = {token: Cookie.get('token')}
         let response = await api.getUserInformation(headers)
         localStorage.setItem('user_profile', JSON.stringify(response.data.data))
         commit('onOkGetUserInformation', response.data.data)
@@ -86,7 +86,6 @@ const mutations = {
         } else if (data.error) {
             state.alert_message = data.error
         }
-        // state.messages = data.errors
 
     },
     onOkGetLogin(state, data) {

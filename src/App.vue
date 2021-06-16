@@ -1,30 +1,33 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+    <div id="app">
+        <v-app>
+            <app-bar v-if="$route.name !== 'auth'"/>
+            <v-main>
+                <router-view/>
+            </v-main>
+        </v-app>
+    </div>
 </template>
 
 <script>
-// import { mapActions } from "vuex"
-// import { mapFields } from 'vuex-map-fields'
-//
-//
-// let _ = require('vue-lodash')
+
+import AppBar from './components/Base/AppBar'
 
 export default {
-  name: 'App',
-  components: {
-  }
+    name: 'App',
+    components: {
+        AppBar,
+    }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
 }
 </style>

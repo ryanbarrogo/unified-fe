@@ -12,7 +12,7 @@ const mutations = {
     updateField,
 }
 
-export const utils = {
+export const users = {
     namespaced: true,
     state,
     getters,
